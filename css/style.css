@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white-color:rgba(255, 255, 255,1);
+    --blueMaari-color:rgba(154, 248, 255,1);
+    --blue-color:rgba(78, 78 ,255,1);
+    --dameere-color:rgba(211, 228, 230,1);
+    --black-color:rgba(0, 0, 0,1);
+    --edit-color:rgb(92, 255, 100);
+    --select-color:rgb(255, 50, 255);
+    --delete-color:rgb(255, 166, 50);
+    --don-color: rgb(255, 251, 0);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: var(--blueMaari-color);
+    overflow: auto;
+}
+
+.container .container-con {
+    background: transparent;
+    margin: 5%;
+    height: fit-content;
+}
+
+.container .container-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5px;
+    background: var(--dameere-color);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-header,
+.container .container-box .container-box-contant{
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding: 10px; */
+    overflow: hidden;
+}
+
+.container .container-box .container-box-header {
+    background: var(--blue-color);
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container .container-box .container-box-contant {
+    background: var(--white-color);
+    border-bottom: 1PX solid var(--black-color);
+    border-radius: 10PX;
+    margin: 0px 10px 10px 10px;
+    padding: 2px 2% 2px 2%;
+    transition: all 0.3S ;
+}
+
+.container .container-box .container-box-header .btt,
+.container .container-box .container-box-header .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-header .btt {
+    width: 10%;
+}
+
+.container .container-box .container-box-header .text {
+    width: 90%;
+}
+
+.container .container-box .container-box-header .text h1 {
+    margin-right: 10%;
+    color: var(--white-color);
+}
+
+.container .container-box .container-box-contant .text {
+    width: 80%;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-contant .btt {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-contant .btt button ,
+.container .container-box .container-box-header .btt button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    line-height: 0;
+    overflow: hidden;
+    transition: width , height 0.3s;
+}
+
+.container .error {
+    display: none;
+    font-size: 25px;
+    color: rgb(255, 37, 37);
+    align-items: center;
+    margin: auto;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-header .btt .add  {
+    background: var(--white-color);
+}
+
+.container .container-box .container-box-contant .btt .edit  {
+    background: var(--edit-color);
+}
+
+.container .container-box .container-box-contant .btt .select  {
+    background: var(--select-color);
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-contant .btt .delete  {
+    background: var(--delete-color);
+}
+
+.container .container-box .container-box-contant:hover {
+    box-shadow: 0PX 5PX 15PX var(--black-color);
+}
+
+.container .container-box .container-box-contant.don{
+    background: var(--don-color) !important;
+    transition: all 0.3s;
+}
+
+.container .container-box .container-box-contant .btt .select.don{
+    background: orangered;
+    transition: all 0.3s;
+}
+
+/*
+
+@media screen and (min-width: 900px){
+    .container .container-box .container-box-header .btt {
+        width: 20%;
+    }
+
+    .container .container-box .container-box-header .text {
+        width: 80%;
+    }
+} */
+
+@media screen and (max-width: 900px) {
+    .container .container-box .container-box-header .btt {
+        width: 20%;
+    }
+
+    .container .container-box .container-box-header .text {
+        width: 80%;
+    }
+
+    .container .container-box .container-box-contant .btt {
+        width: 30%;
+    }
+
+    .container .container-box .container-box-contant .text {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .container .container-con {
+        margin: 2%;
+    }
+
+    .container .container-box .container-box-contant .btt {
+        width: 50%;
+    }
+
+    .container .container-box .container-box-contant .text {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container .container-box .container-box-header{
+        padding: 2px;
+    } 
+
+    .container .container-box .container-box-header .text h1 {
+        font-size: 20px;
+    }
+
+    .container .container-box .container-box-contant .text h4 {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .container .container-box .container-box-contant .text span {
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .container .container-box .container-box-contant .btt button ,
+    .container .container-box .container-box-header .btt button{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 220px) {
+    .container .container-box .container-box-header .text h1 {
+        font-size: 18px;
+    }
+
+    .container .container-box .container-box-contant .text h4 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .container .container-box .container-box-contant .text span {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .container .container-box .container-box-contant .btt button ,
+    .container .container-box .container-box-header .btt button{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 238px) {
+    .container .container-box {
+        display: none;
+    }
+    .container .error {
+        display: block;
+    }
+} 
